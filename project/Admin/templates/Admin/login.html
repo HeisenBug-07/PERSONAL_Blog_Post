@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div align="center" class="jumbotron"  style="background:linear-gradient(to right, #654ea3, #eaafc8)">
+	<h1 style="color:white"> Login </h1>
+     <p style="color:white">This is admin login panel if you are not an admin pease go to "home page" and read posts</p>
+</div>
+<div class="container-fluid" style="border:2px solid #cecece; width : 80%;color:white; background:linear-gradient( #654ea3, #eaafc8)">
+    <br>
+    <form method="post">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+        {{form.email.label(class='form-group')}} {{form.email(class='form-control')}}
+        </div>
+        <div class="form-group">
+        {{form.password.label(class='form-group')}} {{form.password(class='form-control')}}
+        </div>
+        <div align="center">
+        {{form.submit(class='btn btn-outline-dark btn-lg')}}
+        </div>
+    </form>
+    <br>
+</div>
+<br>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron" style="background:linear-gradient(to right, #654ea3, #eaafc8)" >
+    <a class="btn btn-danger float-right" href="{{url_for('admin.logout')}}">Logout</a>
+	<h1 align="center" style="color:white"> Dashboard </h1>
+</div>
+<div class="container" style="color : white; background:linear-gradient( #9c27b0, #8ecdff)">
+<br>
+<a class="btn btn-success btn-lg" href="{{url_for('post.add')}}">Create New Post</a>
+<a class="btn btn-primary btn-lg float-right" href="{{url_for('admin.read_feedback')}}">Read feedback</a>
+<br>
+<hr>
+  <h1 align="center"> Posts </h1>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Post Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+	{% for p in post %}
+  <tbody>
+    <tr>
+      <th scope="row">{{p.s_no}}</th>
+      <td><a href="/read/{{p.slug}}"><span style="color : white">{{p.title}}</span></a></td>
+      <td><a href="/update/{{p.s_no}}"><span style="color : blue">Edit</span></a></td>
+      <td><a href="/delete/{{p.s_no}}"><span style="color : red">Delete</span></a></td>
+    </tr>
+  </tbody>
+	{% endfor %}
+</table>
+</div>
+{% endblock %}

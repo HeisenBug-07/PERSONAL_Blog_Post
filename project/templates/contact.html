@@ -1,0 +1,29 @@
+{% extends "base_2.html" %}
+{% block content %}
+
+<div align="center" class="jumbotron" style="background:linear-gradient(to right, #1a2980, #26d0ce)" >
+	<h2 style="color:white"> Have questions? I have answers. </h2><br>
+    <h5 style="color:white">Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</h5>
+</div>
+
+<div class="container-fluid" style="border:2px solid #cecece;width: 80%; background:linear-gradient( #1a2980, #26d0ce);color:white; opacity:0.8">
+<form method="post" >
+    <br>
+    {{form.hidden_tag()}}
+    <div class="form-group">
+    {{form.name.label(class='form-group')}} {{form.name(class='form-control')}}
+    </div>
+    <div class="form-group">
+    {{form.email.label(class='form-group')}}  {{form.email(class='form-control')}}
+    </div>
+    <div class="form-group">
+    {{form.feedback.label(class='form-group')}} {{form.feedback(class='form-control')}}
+    </div>
+    <div align="center">
+    {{form.submit(class='btn btn-outline-dark btn-lg')}}
+    </div>
+</form><br>
+</div>
+<br>
+
+{% endblock %}

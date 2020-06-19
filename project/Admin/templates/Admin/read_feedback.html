@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="jumbotron" align="center" style="text-align: center; background:linear-gradient(to right, #654ea3, #eaafc8)" >
+	<h1 style="color:white"> Read Feedback </h1>
+</div>
+<div class="container">
+<br>
+{% for f in feedback.items %}
+<div class="container">
+<div class="jumbotron" style="background:linear-gradient( #654ea3, #eaafc8); color:white">
+  <h4 class="display-4">{{f.name}}</h4>
+  <p>by : {{f.email}} on {{f.date.strftime("%d-%m-%y")}}</p>
+  <hr class="my-4">
+  <p class="lead">{{f.feedback}}</p>
+  <a class="btn btn-danger float-right" href="/delete_feedback/{{f.s_no}}">Delete</a>
+</div>
+</div>
+{% endfor %}
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    {% for page_num in feedback.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+      {% if feedback.page == page_num %}
+        <li class="page-item disabled">
+          <a class="page-link" href="{{url_for('admin.read_feedback', page=page_num)}}">{{page_num}}</a>
+        </li>
+      {% else %}
+        <li class="page-item ">
+          <a class="page-link" href="{{url_for('admin.read_feedback', page=page_num)}}">{{page_num}}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+<br>
+</div>
+
+{% endblock %}
