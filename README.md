@@ -1,4 +1,4 @@
-# PERSONAL_Blog_Post_API
+# PERSONAL_Blog_Post
 - madee by using flask 
 
 ## Package with versions
