@@ -9,5 +9,15 @@
 
 ## Website view:
   ### Home screen
-  ### Login Screen
+  ![Title - Google Chrome 19-06-2020 17_17_18](https://user-images.githubusercontent.com/62887866/85129492-d4784100-b250-11ea-8233-cc7e701ccc91.png)
+  ### Admin Login Screen
+  ![Title - Google Chrome 19-06-2020 17_17_28](https://user-images.githubusercontent.com/62887866/85129532-e4902080-b250-11ea-9ada-7dddc41480c8.png)
   ### Custom Error Screen
+  ![Title - Google Chrome 19-06-2020 17_17_36](https://user-images.githubusercontent.com/62887866/85129547-e954d480-b250-11ea-9fab-56fb89b98fee.png)
+  ### Admin Dashboard
+  ![Title - Google Chrome 19-06-2020 17_19_23](https://user-images.githubusercontent.com/62887866/85129672-202aea80-b251-11ea-848b-1a1fc7b33a77.png)
+  ### Create New Post
+  ![Title - Google Chrome 19-06-2020 17_19_42](https://user-images.githubusercontent.com/62887866/85129796-5cf6e180-b251-11ea-944f-e4ffa7bd2625.png)
+
+
+
